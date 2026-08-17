@@ -59,6 +59,12 @@ def fib_memo(n: int) -> int:
     call tree collapses from exponential to linear — an exponential speedup from
     a single decorator, which is the most dramatic one-line change in this
     repository.
+
+    What the cache does *not* buy is stack depth: the first descent still goes n
+    frames deep, so this raises ``RecursionError`` for large n where
+    :func:`fib_table` is fine. Where exactly it breaks is version-dependent —
+    CPython 3.12 stopped charging the C-level ``lru_cache`` wrapper against the
+    Python recursion limit, so n=500 raises on 3.10 and returns on 3.13.
     """
 
     @lru_cache(maxsize=None)

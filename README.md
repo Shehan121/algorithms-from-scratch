@@ -160,7 +160,7 @@ and item recovery), coin change, LIS (O(n²) and O(n log n))
 ## Tests
 
 ```
-271 passed in 0.13s
+273 passed in 0.13s
 ```
 
 Correctness is defined as **agreeing with a reference implementation** — sorts
@@ -177,6 +177,7 @@ misremember:
 | `test_selection_sort_comparison_count_is_exact` | Exactly n(n−1)/2 comparisons — a closed form, so the counter is verified against arithmetic, not plausibility |
 | `test_selection_sort_is_not_stable` | Asserts a real limitation instead of glossing over it |
 | `test_recursive_dfs_overflows_where_iterative_does_not` | Recursive DFS raises `RecursionError` on a 20,000-node path; the iterative version does not |
+| `test_memo_is_stack_bounded` | Memoised Fibonacci still recurses n deep — the cache buys the complexity class, not the depth |
 | `test_degenerate_tree_is_a_list` | BST height is exactly n−1 after sorted insertion |
 | `test_greedy_would_be_wrong` | Coins `[1,3,4]` making 6: greedy gives 3 coins, DP gives 2 |
 | `test_greedy_by_density_is_not_optimal` | Why 0/1 knapsack cannot be solved greedily |
@@ -194,7 +195,7 @@ library. `matplotlib` is needed for the figures and `pytest` for the tests.
 ```bash
 pip install -r requirements.txt
 
-pytest                              # 271 tests
+pytest                              # 273 tests
 python scripts/run_benchmarks.py    # measure everything -> reports/*.csv
 python scripts/make_figures.py      # reports/figures/*.png
 ```
@@ -271,7 +272,7 @@ src/algokit/
 scripts/
 ├── run_benchmarks.py   writes reports/*.csv
 └── make_figures.py     writes reports/figures/*.png
-tests/                  271 tests, reference-implementation based
+tests/                  273 tests, reference-implementation based
 reports/                measurements + 8 figures
 LEARNING_LOG.md         what the measurements corrected
 ```

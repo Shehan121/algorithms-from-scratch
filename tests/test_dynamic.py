@@ -1,6 +1,7 @@
 """Dynamic programming: every variant must agree, and greedy must be shown wrong."""
 
 import random
+import sys
 
 import pytest
 
@@ -31,9 +32,31 @@ class TestFibonacci:
         assert [fn(i) for i in range(21)] == FIB_20
 
     def test_all_implementations_agree_at_scale(self):
-        """The four differ enormously in cost and not at all in result."""
-        for n in (50, 200, 500):
+        """The three differ enormously in cost and not at all in result.
+
+        Capped at n=200 because ``fib_memo`` recurses n deep — see
+        :meth:`test_memo_is_stack_bounded`. The iterative pair is checked
+        further out in :meth:`test_iterative_agree_beyond_the_stack_limit`.
+        """
+        for n in (50, 200):
             assert fib_memo(n) == fib_table(n) == fib_constant_space(n)
+
+    def test_iterative_agree_beyond_the_stack_limit(self):
+        """No recursion, so no ceiling — these two agree as far as we care to go."""
+        for n in (500, 5000):
+            assert fib_table(n) == fib_constant_space(n)
+
+    def test_memo_is_stack_bounded(self):
+        """Memoisation buys the complexity class, not the depth.
+
+        ``fib_memo`` recurses once per distinct argument, so it inherits
+        CPython's recursion limit no matter how good the cache is. That is the
+        concrete reason to prefer tabulation, and the limit is low enough to hit
+        in practice: the interpreter's own accounting differs between versions,
+        so this asserts the failure rather than a specific safe value of n.
+        """
+        with pytest.raises(RecursionError):
+            fib_memo(sys.getrecursionlimit() * 2)
 
 
 class TestGridPaths:
