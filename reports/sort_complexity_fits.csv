@@ -1,0 +1,36 @@
+algorithm,shape,measured_class,r_squared,mean_doubling_ratio,points
+bubble,random,O(n^2),1.00000,4.03,6
+insertion,random,O(n^2),0.99998,3.91,6
+selection,random,O(n^2),1.00000,4.01,6
+merge,random,O(n log n),0.99999,2.22,7
+quick (random pivot),random,O(n),0.99856,2.20,7
+quick (last pivot),random,O(n log n),0.99987,2.33,6
+heap,random,O(n log n),0.99998,2.23,7
+bubble,sorted,O(n),1.00000,2.01,6
+insertion,sorted,O(n),1.00000,2.01,6
+selection,sorted,O(n^2),1.00000,4.01,6
+merge,sorted,O(n log n),1.00000,2.20,7
+quick (random pivot),sorted,O(n log n),0.99971,2.23,7
+quick (last pivot),sorted,O(n^2),1.00000,4.02,4
+heap,sorted,O(n log n),0.99999,2.23,7
+bubble,reversed,O(n^2),1.00000,4.01,6
+insertion,reversed,O(n^2),1.00000,4.01,6
+selection,reversed,O(n^2),1.00000,4.01,6
+merge,reversed,O(n log n),1.00000,2.20,7
+quick (random pivot),reversed,O(n log n),0.99943,2.22,7
+quick (last pivot),reversed,O(n^2),1.00000,4.02,4
+heap,reversed,O(n log n),0.99996,2.24,7
+bubble,nearly sorted,O(n),0.98669,2.39,6
+insertion,nearly sorted,O(n),0.99974,2.10,6
+selection,nearly sorted,O(n^2),1.00000,4.01,6
+merge,nearly sorted,O(n log n),1.00000,2.19,7
+quick (random pivot),nearly sorted,O(n log n),0.99970,2.25,7
+quick (last pivot),nearly sorted,O(n^2),0.99997,3.96,4
+heap,nearly sorted,O(n log n),0.99999,2.23,7
+bubble,few unique,O(n^2),1.00000,4.00,6
+insertion,few unique,O(n^2),0.99997,3.85,6
+selection,few unique,O(n^2),1.00000,4.01,6
+merge,few unique,O(n log n),1.00000,2.22,7
+quick (random pivot),few unique,O(n),0.99642,1.96,7
+quick (last pivot),few unique,O(n^2),0.99999,3.77,6
+heap,few unique,O(n log n),0.99999,2.21,7

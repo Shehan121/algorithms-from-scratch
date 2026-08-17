@@ -1,0 +1,58 @@
+{
+  "sizes": {
+    "quadratic_sorts": [
+      64,
+      128,
+      256,
+      512,
+      1024,
+      2048
+    ],
+    "nlogn_sorts": [
+      256,
+      512,
+      1024,
+      2048,
+      4096,
+      8192,
+      16384
+    ]
+  },
+  "measured_classes": {
+    "bubble / random": "O(n^2)",
+    "insertion / random": "O(n^2)",
+    "selection / random": "O(n^2)",
+    "merge / random": "O(n log n)",
+    "quick (random pivot) / random": "O(n)",
+    "quick (last pivot) / random": "O(n log n)",
+    "heap / random": "O(n log n)",
+    "bubble / sorted": "O(n)",
+    "insertion / sorted": "O(n)",
+    "selection / sorted": "O(n^2)",
+    "merge / sorted": "O(n log n)",
+    "quick (random pivot) / sorted": "O(n log n)",
+    "quick (last pivot) / sorted": "O(n^2)",
+    "heap / sorted": "O(n log n)",
+    "bubble / reversed": "O(n^2)",
+    "insertion / reversed": "O(n^2)",
+    "selection / reversed": "O(n^2)",
+    "merge / reversed": "O(n log n)",
+    "quick (random pivot) / reversed": "O(n log n)",
+    "quick (last pivot) / reversed": "O(n^2)",
+    "heap / reversed": "O(n log n)",
+    "bubble / nearly sorted": "O(n)",
+    "insertion / nearly sorted": "O(n)",
+    "selection / nearly sorted": "O(n^2)",
+    "merge / nearly sorted": "O(n log n)",
+    "quick (random pivot) / nearly sorted": "O(n log n)",
+    "quick (last pivot) / nearly sorted": "O(n^2)",
+    "heap / nearly sorted": "O(n log n)",
+    "bubble / few unique": "O(n^2)",
+    "insertion / few unique": "O(n^2)",
+    "selection / few unique": "O(n^2)",
+    "merge / few unique": "O(n log n)",
+    "quick (random pivot) / few unique": "O(n)",
+    "quick (last pivot) / few unique": "O(n^2)",
+    "heap / few unique": "O(n log n)"
+  }
+}

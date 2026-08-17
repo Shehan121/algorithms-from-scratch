@@ -1,0 +1,5 @@
+# The algorithms themselves have NO runtime dependencies - standard library only.
+# These are needed for the tests and the figures.
+
+pytest>=8.0          # test suite
+matplotlib>=3.8      # scripts/make_figures.py
