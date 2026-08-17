@@ -13,7 +13,7 @@ sort on already-sorted input**, that a bad quicksort pivot causes a
 wrong before any of the algorithms were.
 
 ![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)
-![Tests](https://img.shields.io/badge/tests-271%20passing-1baf7a)
+[![tests](https://github.com/Shehan121/algorithms-from-scratch/actions/workflows/tests.yml/badge.svg)](https://github.com/Shehan121/algorithms-from-scratch/actions/workflows/tests.yml)
 ![Dependencies](https://img.shields.io/badge/runtime%20deps-none-8a8a85)
 
 ---
